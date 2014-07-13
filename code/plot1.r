@@ -26,7 +26,8 @@ print("Beginning to read data from disk.")
 # create plot
 print("     Creating plot.")
     par(mfrow = c(1, 1), mar = c(5, 4, 2, 2))
-    hist(wrkdata$Global_active_power, col = "red", xlab="Global Active Power (kilowatts)", main="Global Active Power", xlim=c(0,6), ylim=c(0, 1200))
+    hist(wrkdata$Global_active_power, col = "red", xlab="Global Active Power (kilowatts)", main="Global Active Power", ylim=c(0, 1200), xaxt="n")
+    Axis(side=1, at=c(0,2,4,6), labels=c(0,2,4,6)) 
 
 ## write plot out to PNG file
 print("     Writing plot to file.")
